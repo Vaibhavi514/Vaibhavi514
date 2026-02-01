@@ -15,6 +15,8 @@ Cloud Computing Enthusiast | DevOps & AI Engineer | CI/CD Pipelines | Python Dev
 - Docker
 - Git & GitHub
 - CI/CD with GitHub Actions
+- Terraform
+- Jenkins
 - Azure & GCP
 
 **Programming & Web**
