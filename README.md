@@ -40,6 +40,6 @@ Cloud Computing Enthusiast | DevOps & AI Engineer | CI/CD Pipelines | Python Dev
 ![Vaibhavi's GitHub stats](https://github-readme-stats.vercel.app/api?username=Vaibhavi514&show_icons=true&theme=radical)
 
 ## 📫 Connect With Me
-💼 LinkedIn: [linkedin.com/in/vaibhavi-ghadge](www.linkedin.com/in/vaibhavi-ghadge)  
+💼 LinkedIn: [www.linkedin.com/in/vaibhavi-ghadge](www.linkedin.com/in/vaibhavi-ghadge)  
 🌐 Portfolio: [https://vaibhavi-world.netlify.app](https://vaibhavi-world.netlify.app)  
 📧 Email: vaibhavighadge514@gmail.com
