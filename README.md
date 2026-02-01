@@ -41,5 +41,5 @@ Cloud Computing Enthusiast | DevOps & AI Engineer | CI/CD Pipelines | Python Dev
 
 ## 📫 Connect With Me
 💼 LinkedIn: [www.linkedin.com/in/vaibhavi-ghadge](www.linkedin.com/in/vaibhavi-ghadge)  
-🌐 Portfolio: [https://vaibhavi-world.netlify.app](https://vaibhavi-world.netlify.app)  
+🌐 Portfolio: [https://vaibhaviportf1.netlify.app](https://vaibhaviportf1.netlify.app)  
 📧 Email: vaibhavighadge514@gmail.com
