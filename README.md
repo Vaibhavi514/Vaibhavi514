@@ -38,8 +38,6 @@ Cloud Computing Enthusiast | DevOps & AI Engineer | CI/CD Pipelines | Python Dev
 - **Bash Automation Scripts**: Automate repetitive tasks, backup files, organize directories, auto-update packages, or batch rename files
 - **Dockerized ML Model**: Containerized a machine learning model using Docker and served it via a REST API for easy deployment.
 
-## 📊 GitHub Stats
-![Vaibhavi's GitHub stats](https://github-readme-stats.vercel.app/api?username=Vaibhavi514&show_icons=true&theme=radical)
 
 ## 📫 Connect With Me
 💼 LinkedIn: [www.linkedin.com/in/vaibhavi-ghadge](www.linkedin.com/in/vaibhavi-ghadge)  
