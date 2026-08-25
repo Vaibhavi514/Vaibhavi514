@@ -1,153 +1,416 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth dark">
 <head>
     <meta charset="UTF-8">
-    <title>Vaibhavi Ghadge Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaibhavi Ghadage | Cloud & DevOps Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0b1120',
+                        cardBg: '#1e293b',
+                        primary: '#0ea5e9', // Sky 500
+                        accent: '#38bdf8', // Sky 400
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f4f7f8;
-            color: #333;
-            line-height: 1.6;
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0b1120; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+        
+        .gradient-text {
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .glass-nav {
+            background: rgba(11, 17, 32, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        header {
-            background: #4f46e5;
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-
-        header p {
-            margin: 10px 0 0;
-            font-size: 1.2em;
-        }
-
-        main {
-            max-width: 900px;
-            margin: 30px auto;
-            padding: 0 20px;
-        }
-
-        section {
-            background: white;
-            padding: 25px 30px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        section h2 {
-            color: #4f46e5;
-            margin-top: 0;
-            display: flex;
-            align-items: center;
-        }
-
-        section h2 img {
-            width: 30px;
-            margin-right: 10px;
-        }
-
-        ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        ul li {
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-        }
-
-        ul li img {
-            width: 20px;
-            margin-right: 10px;
-        }
-
-        a {
-            color: #4f46e5;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .tech-icons img {
-            width: 40px;
-            margin-right: 15px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            color: #777;
-            font-size: 0.9em;
+        .glow-card:hover {
+            box-shadow: 0 0 20px rgba(14, 165, 233, 0.15);
+            border-color: rgba(56, 189, 248, 0.5);
         }
     </style>
 </head>
-<body>
+<body class="bg-darkBg text-slate-300 font-sans antialiased selection:bg-primary selection:text-white">
 
-<header>
-    <h1>Hi 👋, I'm Vaibhavi Ghadge</h1>
-    <p>Cloud & ML Enthusiast | DevOps & AI Learner | Full-Stack Developer</p>
-</header>
+    <!-- Navbar -->
+    <nav class="fixed w-full glass-nav z-50 transition-all duration-300 py-4">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white tracking-tighter">Vaibhavi<span class="text-primary">.</span></a>
+            <div class="hidden md:flex space-x-8 items-center text-sm font-medium">
+                <a href="#experience" class="text-slate-400 hover:text-white transition-colors">Experience</a>
+                <a href="#projects" class="text-slate-400 hover:text-white transition-colors">Projects</a>
+                <a href="#skills" class="text-slate-400 hover:text-white transition-colors">Skills</a>
+            </div>
+        </div>
+    </nav>
 
-<main>
-    <section>
-        <h2>🧑‍💻 About Me</h2>
-        <p>🎓 B.E. in Robotics & Automation Engineering</p>
-        <p>☁️ Passionate about Cloud Computing, DevOps, and Machine Learning</p>
-        <p>🛠️ Hands-on experience with Docker, CI/CD pipelines, GitHub Actions, and deploying applications on AWS</p>
-        <p>💻 Experienced in building web apps, AI/ML projects, and automation workflows</p>
-    </section>
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <!-- Abstract Background -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full mix-blend-screen filter blur-[100px] animate-pulse"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-indigo-500/10 rounded-full mix-blend-screen filter blur-[100px] animate-pulse" style="animation-delay: 2s;"></div>
+            <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
+        </div>
 
-    <section>
-        <h2>🛠️ Tech Stack & Tools</h2>
-        <div class="tech-icons">
-            <img src="https://img.icons8.com/color/48/000000/python--v1.png" alt="Python">
-            <img src="https://img.icons8.com/color/48/000000/javascript--v1.png" alt="JavaScript">
-            <img src="https://img.icons8.com/color/48/000000/nodejs.png" alt="Node.js">
-            <img src="https://img.icons8.com/color/48/000000/docker.png" alt="Docker">
-            <img src="https://img.icons8.com/color/48/000000/amazon-web-services.png" alt="AWS">
-            <img src="https://img.icons8.com/color/48/000000/linux.png" alt="Linux">
-            <img src="https://img.icons8.com/color/48/000000/react-native.png" alt="React">
-            <img src="https://img.icons8.com/color/48/000000/github.png" alt="GitHub">
+        <div class="max-w-7xl mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8">
+                <div class="inline-flex items-center px-3 py-1 rounded-full bg-slate-800/50 border border-slate-700 text-xs font-medium text-slate-300">
+                    <span class="w-2 h-2 rounded-full bg-green-400 mr-2 animate-pulse"></span> Open to Work
+                </div>
+                <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-tight leading-tight">
+                    Cloud & <br />
+                    <span class="gradient-text">DevOps Engineer</span>
+                </h1>
+                <p class="text-lg text-slate-400 max-w-xl leading-relaxed">
+                    I'm <strong class="text-white">Vaibhavi Ghadage</strong>. I am a results-driven Cloud & DevOps Engineer specializing in designing secure, highly available infrastructure and automated DevSecOps pipelines. With a proven track record of leading complex multi-cloud migrations and deploying scalable MLOps environments on AWS, I empower teams to ship reliable applications faster while maintaining zero-downtime, production-grade architectures.
+                </p>
+                <div class="flex items-center space-x-4">
+                    <a href="#projects" class="px-8 py-3 bg-primary text-white font-medium rounded-lg hover:bg-sky-400 transition-colors shadow-[0_0_15px_rgba(14,165,233,0.3)]">
+                        View My Work
+                    </a>
+                    <div class="flex space-x-5 ml-4">
+                        <a href="https://github.com/Vaibhavi514" target="_blank" class="text-slate-400 hover:text-white text-2xl transition-colors"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/vaibhavi-ghadge" target="_blank" class="text-slate-400 hover:text-[#0a66c2] text-2xl transition-colors"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="relative hidden md:flex justify-end items-center">
+                <!-- Professional Image Frame (Uncropped) -->
+                <div class="relative w-72 md:w-80 rounded-2xl border-4 border-slate-800 shadow-[0_0_40px_rgba(14,165,233,0.25)] ring-4 ring-primary/20 group overflow-hidden bg-slate-900">
+                    <img src="myimg1.jpeg" alt="Vaibhavi Ghadage" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-darkBg/60 via-transparent to-transparent opacity-40 pointer-events-none"></div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section>
-        <h2>🚀 Projects & Experience</h2>
-        <ul>
-            <li>🌐 <strong>Vaibhavi World</strong>: Portfolio website hosted on AWS S3 with automated CI/CD using GitHub Actions</li>
-            <li>☁️ <strong>IAM Permissions using Terraform</strong>: Automated AWS user management and permission assignment</li>
-            <li>🐳 <strong>Dockerized ML Model</strong>: Containerized ML model and served via REST API</li>
-            <li>🔧 <strong>CI/CD with GitHub Actions</strong>: Automating deployment for web apps</li>
-        </ul>
+    <!-- Experience Timeline -->
+    <section id="experience" class="py-24 relative border-t border-slate-800">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-white mb-16 flex items-center">
+                <i class="fas fa-briefcase text-primary mr-4"></i> Professional Experience
+            </h2>
+            
+            <div class="relative border-l border-slate-700 ml-3 space-y-12 pb-8">
+                <!-- Rhett Legal -->
+                <div class="relative pl-10 group">
+                    <div class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-primary ring-4 ring-darkBg group-hover:bg-white transition-colors"></div>
+                    <div class="bg-cardBg border border-slate-800 p-8 rounded-2xl glow-card transition-all duration-300">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">DevOps Engineer Intern</h3>
+                                <p class="text-primary font-medium mt-1">Rhett Legal, Jodhpur, Rajasthan</p>
+                            </div>
+                            <span class="mt-2 md:mt-0 inline-block px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded-md border border-slate-700">Jan 2026 – Jun 2026</span>
+                        </div>
+                        <ul class="space-y-3 text-slate-400 text-sm leading-relaxed mt-6 list-disc list-inside marker:text-primary">
+                            <li><strong class="text-slate-200">Containerized & Deployed:</strong> Automated production web app deployments on AWS (ECR & ECS Fargate) using Bash/PowerShell workflows.</li>
+                            <li><strong class="text-slate-200">Cloud Migration:</strong> Led seamless multi-service migration from GCP to AWS (MongoDB to DocumentDB, PostgreSQL to RDS).</li>
+                            <li><strong class="text-slate-200">MLOps Deployment:</strong> Hosted a Hugging Face PaddleOCR model on an EC2 GPU instance for production OCR inference.</li>
+                            <li><strong class="text-slate-200">Security:</strong> Secured AWS infrastructure utilizing AWS WAF, Amazon Inspector, and comprehensive VPC networking rules.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section>
-        <h2>📫 Connect With Me</h2>
-        <ul>
-            <li>💼 LinkedIn: <a href="https://www.linkedin.com/in/vaibhavi-ghadge">linkedin.com/in/vaibhavi-ghadge</a></li>
-            <li>🌐 Portfolio: <a href="https://vaibhaviportf1.netlify.app/">vaibhaviportf1.netlify.app</a></li>
-            <li>📧 Email: vaibhavi.ghadge@example.com</li>
-        </ul>
+    <!-- Detailed Projects Section (Dynamic via GitHub) -->
+    <section id="projects" class="py-24 relative bg-[#0f172a] border-y border-slate-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white mb-4">Featured <span class="gradient-text">Work & Repositories</span></h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">Live fetching my open-source projects, automation scripts, and infrastructure code directly from GitHub.</p>
+            </div>
+
+            <!-- Real-time GitHub Projects Container -->
+            <div id="github-projects" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Loading Skeleton -->
+                <div class="col-span-full text-center py-12 text-slate-400 flex flex-col items-center">
+                    <i class="fas fa-circle-notch fa-spin text-4xl text-primary mb-4"></i>
+                    <p>Fetching repositories from GitHub API...</p>
+                </div>
+            </div>
+        </div>
     </section>
-</main>
 
-<footer>
-    &copy; 2026 Vaibhavi Ghadge | Made with ❤️
-</footer>
+    <!-- Skills Grid -->
+    <section id="skills" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-white mb-16 text-center">Technical <span class="gradient-text">Arsenal</span></h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Cloud -->
+                <div class="bg-cardBg border border-slate-800 p-6 rounded-2xl glow-card group transition-all">
+                    <div class="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center text-primary text-xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Cloud Computing</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-800/80 text-xs text-slate-300 rounded border border-slate-700">AWS (EC2, ECS, S3, RDS)</span>
+                        <span class="px-3 py-1 bg-slate-800/80 text-xs text-slate-300 rounded border border-slate-700">GCP</span>
+                        <span class="px-3 py-1 bg-slate-800/80 text-xs text-slate-300 rounded border border-slate-700">Azure</span>
+                    </div>
+                </div>
 
+                <!-- Containers / CI CD -->
+                <div class="bg-cardBg border border-slate-800 p-6 rounded-2xl glow-card group transition-all">
+                    <div class="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center text-primary text-xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fab fa-docker"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Containers & CI/CD</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-800/80 text-xs text-slate-300 rounded border border-slate-700">Docker</span>
+                        <span class="px-3 py-1 bg-slate-800/80 text-xs text-slate-300 rounded border border-slate-700">Kubernetes</span>
+                        <span class="px-3 py-1 bg-slate-800/80 text-xs text-slate-300 rounded border border-slate-700">GitHub Actions</span>
+                        <span class="px-3 py-1 bg-slate-800/80 text-xs text-slate-300 rounded border border-slate-700">Terraform</span>
+                    </div>
+                </div>
+
+                <!-- GenAI / MLOps -->
+                <div class="bg-cardBg border border-slate-800 p-6 rounded-2xl glow-card group transition-all">
+                    <div class="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center text-primary text-xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">GenAI & MLOps</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-800/80 text-xs text-slate-300 rounded border border-slate-700">RAG</span>
+                        <span class="px-3 py-1 bg-slate-800/80 text-xs text-slate-300 rounded border border-slate-700">LangChain</span>
+                        <span class="px-3 py-1 bg-slate-800/80 text-xs text-slate-300 rounded border border-slate-700">Hugging Face</span>
+                        <span class="px-3 py-1 bg-slate-800/80 text-xs text-slate-300 rounded border border-slate-700">Agentic AI</span>
+                    </div>
+                </div>
+
+                <!-- Programming -->
+                <div class="bg-cardBg border border-slate-800 p-6 rounded-2xl glow-card group transition-all">
+                    <div class="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center text-primary text-xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Programming & Scripting</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-800/80 text-xs text-slate-300 rounded border border-slate-700">Python</span>
+                        <span class="px-3 py-1 bg-slate-800/80 text-xs text-slate-300 rounded border border-slate-700">Bash / PowerShell</span>
+                        <span class="px-3 py-1 bg-slate-800/80 text-xs text-slate-300 rounded border border-slate-700">JavaScript</span>
+                        <span class="px-3 py-1 bg-slate-800/80 text-xs text-slate-300 rounded border border-slate-700">C++</span>
+                    </div>
+                </div>
+
+                <!-- Security -->
+                <div class="bg-cardBg border border-slate-800 p-6 rounded-2xl glow-card group transition-all">
+                    <div class="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center text-primary text-xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Security</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-800/80 text-xs text-slate-300 rounded border border-slate-700">AWS WAF</span>
+                        <span class="px-3 py-1 bg-slate-800/80 text-xs text-slate-300 rounded border border-slate-700">Amazon Inspector</span>
+                        <span class="px-3 py-1 bg-slate-800/80 text-xs text-slate-300 rounded border border-slate-700">VPC & Security Groups</span>
+                    </div>
+                </div>
+
+                <!-- Databases -->
+                <div class="bg-cardBg border border-slate-800 p-6 rounded-2xl glow-card group transition-all">
+                    <div class="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center text-primary text-xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Databases & APIs</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-800/80 text-xs text-slate-300 rounded border border-slate-700">PostgreSQL</span>
+                        <span class="px-3 py-1 bg-slate-800/80 text-xs text-slate-300 rounded border border-slate-700">MongoDB</span>
+                        <span class="px-3 py-1 bg-slate-800/80 text-xs text-slate-300 rounded border border-slate-700">REST APIs</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certifications -->
+    <section class="py-24 relative bg-[#0f172a] border-t border-slate-800">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-white mb-10"><i class="fas fa-graduation-cap text-primary mr-3"></i> Education & Certifications</h2>
+            
+            <div class="bg-cardBg border border-slate-700 p-8 rounded-2xl shadow-xl text-left mb-12 relative overflow-hidden max-w-4xl mx-auto">
+                <div class="absolute top-0 right-0 p-8 opacity-10 text-9xl">
+                    <i class="fas fa-university"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-white relative z-10">B.E. in Robotics and Automation</h3>
+                <p class="text-primary font-medium mb-4 relative z-10">Zeal College of Engineering and Research, Pune</p>
+                <span class="inline-block px-3 py-1 bg-green-500/10 text-green-400 text-sm font-semibold rounded border border-green-500/20 relative z-10">Class of 2025</span>
+            </div>
+
+            <!-- Certifications Section -->
+            <div class="flex flex-wrap justify-center gap-4">
+                
+                <!-- Highlighted AWS Certification -->
+                <div class="bg-cardBg border border-primary/40 shadow-[0_0_15px_rgba(14,165,233,0.15)] px-6 py-4 rounded-xl text-left flex items-center w-full sm:w-auto transform hover:scale-105 transition-transform">
+                    <i class="fab fa-aws text-4xl text-orange-400 mr-4"></i>
+                    <div>
+                        <p class="font-bold text-white text-lg">AWS Certified</p>
+                        <p class="text-sm text-primary">Cloud Practitioner Essentials</p>
+                    </div>
+                </div>
+
+                <!-- Standard Certifications -->
+                <div class="bg-slate-800 border border-slate-700 px-5 py-4 rounded-xl text-sm text-slate-300 flex items-center w-full sm:w-auto hover:border-slate-500 transition-colors">
+                    <i class="fas fa-award text-yellow-500 mr-3 text-lg"></i> AWS with DevOps Intern Training (UV Technocrats)
+                </div>
+                <div class="bg-slate-800 border border-slate-700 px-5 py-4 rounded-xl text-sm text-slate-300 flex items-center w-full sm:w-auto hover:border-slate-500 transition-colors">
+                    <i class="fas fa-award text-yellow-500 mr-3 text-lg"></i> Django Web Development Internship - Elite
+                </div>
+                <div class="bg-slate-800 border border-slate-700 px-5 py-4 rounded-xl text-sm text-slate-300 flex items-center w-full sm:w-auto hover:border-slate-500 transition-colors">
+                    <i class="fas fa-award text-yellow-500 mr-3 text-lg"></i> Machine Learning & AI (MathWorks)
+                </div>
+                <div class="bg-slate-800 border border-slate-700 px-5 py-4 rounded-xl text-sm text-slate-300 flex items-center w-full sm:w-auto hover:border-slate-500 transition-colors">
+                    <i class="fas fa-award text-yellow-500 mr-3 text-lg"></i> Deloitte Tech Job Simulation (July 2026)
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 relative border-t border-slate-800 text-center bg-[#0b1120]">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-slate-500 text-sm">
+            <p>&copy; 2026 Vaibhavi Ghadage. All rights reserved.</p>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+                <a href="https://github.com/Vaibhavi514" target="_blank" class="hover:text-white transition-colors"><i class="fab fa-github text-xl"></i></a>
+                <a href="https://www.linkedin.com/in/vaibhavi-ghadge" target="_blank" class="hover:text-white transition-colors"><i class="fab fa-linkedin text-xl"></i></a>
+                <a href="mailto:vaibhavighadge514@gmail.com" class="hover:text-white transition-colors"><i class="fas fa-envelope text-xl"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GitHub Fetch Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const container = document.getElementById('github-projects');
+            const username = 'Vaibhavi514';
+
+            // Fallback professional tech images based on project keywords/language
+            const getProfessionalThumbnail = (repo) => {
+                const name = repo.name.toLowerCase();
+                const lang = (repo.language || '').toLowerCase();
+                
+                if (lang === 'python' || lang === 'jupyter notebook' || name.includes('ml') || name.includes('ai')) {
+                    return 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=800&auto=format&fit=crop'; // Data / Python code
+                } else if (name.includes('aws') || name.includes('cloud') || name.includes('terraform')) {
+                    return 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800&auto=format&fit=crop'; // Cloud infrastructure
+                } else if (name.includes('docker') || name.includes('container')) {
+                    return 'https://images.unsplash.com/photo-1605745341112-85968b19335b?q=80&w=800&auto=format&fit=crop'; // Shipping/Containers metaphor
+                } else if (lang === 'html' || lang === 'javascript' || lang === 'css') {
+                    return 'https://images.unsplash.com/photo-1627398246734-08a115865e13?q=80&w=800&auto=format&fit=crop'; // Web dev UI
+                } else {
+                    return 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop'; // Generic high tech motherboard
+                }
+            };
+
+            try {
+                const response = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=30`);
+                if (!response.ok) throw new Error('Failed to fetch repositories');
+                
+                const repos = await response.json();
+                
+                // Exclude words more aggressively (will match "task_1", "task-1", "task1", "task 1", etc.)
+                const excludeKeywords = ['vaibhavi514', 'task', 'test'];
+
+                // Filter out the excluded repositories
+                const filteredRepos = repos.filter(repo => {
+                    const repoNameLower = repo.name.toLowerCase();
+                    return !excludeKeywords.some(keyword => repoNameLower.includes(keyword));
+                });
+
+                if (filteredRepos.length === 0) {
+                    container.innerHTML = '<p class="col-span-full text-center text-slate-400">No public repositories found.</p>';
+                    return;
+                }
+
+                let html = '';
+                
+                filteredRepos.forEach(repo => {
+                    // Use the highly professional mapped thumbnails instead of basic OpenGraph text
+                    const imageUrl = getProfessionalThumbnail(repo);
+                    
+                    const desc = repo.description || 'Automation, configuration, and infrastructure files for this project.';
+                    const lang = repo.language || 'Documentation/Other';
+                    const topicsHtml = (repo.topics || []).slice(0, 3).map(t => 
+                        `<span class="px-2 py-0.5 bg-slate-800 text-[10px] text-slate-400 rounded uppercase tracking-wider border border-slate-700">${t}</span>`
+                    ).join('');
+
+                    html += `
+                        <a href="${repo.html_url}" target="_blank" class="block group h-full">
+                            <div class="bg-cardBg border border-slate-800 rounded-2xl overflow-hidden h-full flex flex-col glow-card transition-all duration-300">
+                                
+                                <!-- Project Image -->
+                                <div class="h-48 overflow-hidden relative bg-slate-900 border-b border-slate-800">
+                                    <img src="${imageUrl}" alt="${repo.name}" class="w-full h-full object-cover group-hover:scale-110 opacity-90 transition-transform duration-700" loading="lazy">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-cardBg via-transparent to-transparent opacity-90"></div>
+                                </div>
+                                
+                                <!-- Project Details -->
+                                <div class="p-6 flex flex-col flex-grow relative -mt-6 z-10">
+                                    <div class="flex justify-between items-start mb-3">
+                                        <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors truncate" title="${repo.name}">
+                                            ${repo.name.replace(/-/g, ' ')}
+                                        </h3>
+                                        <div class="flex items-center text-slate-400 text-sm bg-slate-800 px-2 py-1 rounded-md border border-slate-700 shadow-sm">
+                                            <i class="fas fa-star text-yellow-500 mr-1.5 text-xs"></i> ${repo.stargazers_count}
+                                        </div>
+                                    </div>
+                                    
+                                    <p class="text-slate-400 text-sm mb-6 flex-grow line-clamp-3 leading-relaxed">
+                                        ${desc}
+                                    </p>
+                                    
+                                    <div class="mt-auto">
+                                        <div class="flex flex-wrap gap-2 mb-4">
+                                            <span class="px-2 py-0.5 bg-primary/10 text-primary border border-primary/20 text-xs font-medium rounded">
+                                                <i class="fas fa-code mr-1"></i> ${lang}
+                                            </span>
+                                            ${topicsHtml}
+                                        </div>
+                                        <div class="text-sm font-medium text-slate-500 group-hover:text-primary transition-colors flex items-center">
+                                            View Source Code <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    `;
+                });
+
+                container.innerHTML = html;
+
+            } catch (error) {
+                console.error(error);
+                container.innerHTML = `
+                    <div class="col-span-full text-center py-12 border border-red-500/20 bg-red-500/5 rounded-2xl">
+                        <i class="fas fa-exclamation-triangle text-3xl text-red-400 mb-3"></i>
+                        <p class="text-red-400 font-medium">Failed to load projects directly from GitHub.</p>
+                        <a href="https://github.com/${username}" target="_blank" class="inline-block mt-4 text-white underline decoration-red-400 decoration-2 underline-offset-4 hover:text-red-400 transition-colors">View Profile Manually</a>
+                    </div>
+                `;
+            }
+        });
+    </script>
 </body>
 </html>
